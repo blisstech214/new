@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Home Section Styles */
+.home {
+  background-image: url(./assets/a.png);
+  background-repeat: no-repeat;
+  /* background-size: cover; Cover entire section */
+  background-position: right top;
+  min-height: 100vh;
+  display: block;
+  background-size: contain;
+  flex-direction: column;
+}
+
+/* Contact Section Styles */
+.contact {
+  background-image: url(./assets/banner-bg.png);
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  background-position: right top;
+  min-height: 100vh;
+  display: block;
+  flex-direction: column;
+}
+
+/* Media queries for responsive design */
+
+/* For tablets and iPads */
+@media (max-width: 1024px) {
+  .home {
+    background-size: contain; /* Adjust background size for tablets */
+    background-position: right top;
+  }
+
+  .contact {
+    background-size: 80%; /* Different size for contact on tablet */
+    background-position: center top;
+  }
+}
+
+/* For mobile and small screens */
+@media (max-width: 768px) {
+  .home,
+  .contact {
+    background-image: none; /* Hide the background images on mobile */
+  }
+}
+/* For tablets and iPads */
+@media (max-width: 1024px) {
+  .home {
+    background-size: contain; /* Adjust background size for tablets */
+    background-position: right top;
+  }
+
+  .contact {
+    background-size: 80%; /* Different size for contact on tablet */
+    background-position: right top;
+  }
+}
+
+@keyframes autoUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.auto-up-down {
+  animation: autoUpDown 2s ease-in-out infinite;
+}
+
+.slide-left-right {
+  animation: slideLeftRight 2s ease-in-out infinite;
+}
